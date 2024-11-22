@@ -9,7 +9,6 @@
 #include <vector>
 
 /*
-  This software is based on the proposed algorithm of Sofiane Rabhi.
   Knowing this, this software's version is very likely temporary. The algorithm is prone to change and modification.
 */
 
@@ -230,7 +229,7 @@ int main(int argc, char **argv){
 
         std::cout << "Configuration " << "(Provided)" 
         << ": " << "Score: " << set_classroom.score 
-        << " Log score (in Rabhis): " << log10(set_classroom.score) * 10 << " - " << set_classroom.hashposition << " ; " << set_classroom.configurationName << "\n";
+        << " Log score (in Rbs): " << log10(set_classroom.score) * 10 << " - " << set_classroom.hashposition << " ; " << set_classroom.configurationName << "\n";
 
         for(auto& st : set_classroom.student)
             delete st; 
@@ -274,7 +273,7 @@ int main(int argc, char **argv){
 
         std::cout << "Configuration " << (i+1) 
         << ": " << " Score: " << new_entry.score 
-        << " Log score (in Rabhis): " << log10(new_entry.score) * 10 << " - " << new_entry.hashposition << " ; " << new_entry.configurationName << "\n";
+        << " Log score (in Rbs): " << log10(new_entry.score) * 10 << " - " << new_entry.hashposition << " ; " << new_entry.configurationName << "\n";
         new_entry.configuration_n = i+1;
         simulatedEntries.push_back(new_entry);
     }
@@ -294,7 +293,7 @@ int main(int argc, char **argv){
     for(auto& entry : simulatedEntries){
         std::cout << "Configuration " << (entry.configuration_n) 
         << ": " << " Score: " << entry.score 
-        << " Log score (in Rabhis): " << log10(entry.score) * 10 << " - " << entry.hashposition << " ; " << entry.configurationName << "\n";
+        << " Log score (in Rbs): " << log10(entry.score) * 10 << " - " << entry.hashposition << " ; " << entry.configurationName << "\n";
     } 
     
     std::ofstream out_file;
@@ -311,7 +310,7 @@ int main(int argc, char **argv){
     for(auto& entry : simulatedEntries){
         out_file << "Configuration " << (entry.configuration_n) 
         << ": " << " Score: " << entry.score 
-        << " Log score (in Rabhis): " << log10(entry.score) * 10 << " - " << entry.hashposition << " ; " << entry.configurationName << "\n";
+        << " Log score (in Rbs): " << log10(entry.score) * 10 << " - " << entry.hashposition << " ; " << entry.configurationName << "\n";
     }
 
     out_file.close();
